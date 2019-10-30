@@ -1,0 +1,2 @@
+rootProject.name='Deportes UNQ'
+include ':app'
