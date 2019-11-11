@@ -6,5 +6,10 @@ Source documentation:
     https://developer.android.com/training/testing/index.html
 
 Source Code:
-    https://github.com/android/testing-samples
-    https://github.com/android/testing-samples/tree/master/unit/BasicSample-kotlinApp
+    Development
+        https://github.com/dhruvkaushal11/MVVM-Kotlin-RecyclerView-
+        https://github.com/alphamu/android-MVVM-DataBinding-RecyclerViewExample
+
+    Testing
+        https://github.com/android/testing-samples
+        https://github.com/android/testing-samples/tree/master/unit/BasicSample-kotlinApp

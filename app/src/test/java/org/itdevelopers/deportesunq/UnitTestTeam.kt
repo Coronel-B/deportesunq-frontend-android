@@ -2,7 +2,6 @@ package org.itdevelopers.deportesunq
 
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider
-import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -27,19 +26,6 @@ class UnitTestTeam {
     @Test
     fun getFullName() {
         assertEquals("Universidad Nacional de Quilmes", "Universidad Nacional de Quilmes")
-    }
-
-    @Test
-    fun readStringFromContext_LocalizedString() {
-//        Given a Context object retrieved from Roboelectric
-        val teamUnderTest = Team()
-
-//        .... when the string is returned from the object under test ...
-        val result: String = teamUnderTest.alias
-
-//        ... then the result should be the expected one
-        assertThat(result).isEqualTo(FAKE_STRING)
-
     }
 
 }
