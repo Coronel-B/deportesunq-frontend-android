@@ -8,14 +8,15 @@ data class Competitions(
     @SerializedName("name") @Expose private val name: Int,
     @SerializedName("year") @Expose private val year: String,
     @SerializedName("champion_team") @Expose private val championTeam: String,
-    @SerializedName("competition_details") @Expose private val competitionDetails: List<CompetitionDetail>? = null)
+    @SerializedName("competition_details") @Expose private val competitions: List<Competition>? = null)
 
-data class CompetitionDetail(
+//Detalle de una competición
+data class Competition(
     @SerializedName("id") @Expose private val id: Int,
-    @SerializedName("competition_detail_items") @Expose private val competitionDetailItems: List<CompetitionDetailItem>) {
+    @SerializedName("competition_detail_items") @Expose private val competitionItems: List<CompetitionItem>) {
 }
 
-data class CompetitionDetailItem(
+data class CompetitionItem(
     @SerializedName("id") @Expose private val id: Int,
     @SerializedName("position") @Expose private val position: Int,
     @SerializedName("team") @Expose private val team: Team
