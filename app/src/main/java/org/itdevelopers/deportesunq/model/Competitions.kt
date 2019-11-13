@@ -3,12 +3,12 @@ package org.itdevelopers.deportesunq.model
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName;
 
-data class Competitions(
+data class Competition(
     @SerializedName("id") @Expose private val id: Int,
     @SerializedName("name") @Expose private val name: Int,
     @SerializedName("year") @Expose private val year: String,
     @SerializedName("champion_team") @Expose private val championTeam: String,
-    @SerializedName("competition_details") @Expose private val competitionDetails: List<CompetitionDetail>? = null)
+    @SerializedName("competition_detail") @Expose private val competitionDetail: CompetitionDetail? = null)
 
 data class CompetitionDetail(
     @SerializedName("id") @Expose private val id: Int,
@@ -16,7 +16,6 @@ data class CompetitionDetail(
 }
 
 data class CompetitionDetailItem(
-    @SerializedName("id") @Expose private val id: Int,
     @SerializedName("position") @Expose private val position: Int,
     @SerializedName("team") @Expose private val team: Team
 )
