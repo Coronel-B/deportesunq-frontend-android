@@ -1,0 +1,3 @@
+package org.itdevelopers.deportesunq.adapter
+
+class CompetitionsAdapter

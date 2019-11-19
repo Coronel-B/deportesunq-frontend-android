@@ -7,10 +7,10 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 
-interface ApiInterface {
+interface CompetitionsApiInterface {
 
     @GET("/api/competitions")
-    fun getCompetitionList(): Call<Competitions>
+    fun getCompetitions(): Call<Competitions>
 
     @GET("/api/competition/{competition}")
     fun getCompetition(@Path("competition_id") id: Int): Call<Competition>
