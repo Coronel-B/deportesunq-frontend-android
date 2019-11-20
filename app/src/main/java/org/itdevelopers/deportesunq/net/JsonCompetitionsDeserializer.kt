@@ -26,9 +26,9 @@ class JsonCompetitionsDeserializer: JsonDeserializer<Competitions> {
                     val jsonObject: JsonObject = entry.value.asJsonObject
                     for (subEntry in jsonObject.entrySet()) {
 //                        TODO: Llenar cada competición
-//                        val db = Competition(subEntry.key[''],)
-                        val db = Competition()
-                        competitions?.addCompetition(db)
+//                        val competition = Competition(subEntry.key[''],)
+                        val competition = Competition()
+                        competitions?.addCompetition(competition)
                     }
                 }
             }

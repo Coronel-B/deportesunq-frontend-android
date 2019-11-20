@@ -70,12 +70,13 @@ data class Competition(
     fun fetchCompetitionDetail(callback: Callback<CompetitionDetail>) {
         API.client.create(CompetitionsApiInterface::class.java).getCompetition(id).enqueue(callback)
     }
-
 }
 
 data class CompetitionDetail(
     @SerializedName("id") @Expose private val id: Int,
     @SerializedName("competition_detail_items") @Expose private val competitionDetailItems: List<CompetitionDetailItem>) {
+
+
 }
 
 data class CompetitionDetailItem(
