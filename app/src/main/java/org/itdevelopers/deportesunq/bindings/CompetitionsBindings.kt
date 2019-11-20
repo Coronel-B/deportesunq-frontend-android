@@ -18,7 +18,6 @@ class CompetitionsBindings {
     fun bindRecyclerViewAdapter(imageView: ImageView, imageUrl: String) {
         if(imageUrl != null) {
 //            If we don't do this, you'll see the old image appear briefly before it's replaced with the current image
-            //TODO: Implement
         }
     }
 
