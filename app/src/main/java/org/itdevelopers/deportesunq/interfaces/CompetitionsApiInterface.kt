@@ -14,6 +14,6 @@ interface CompetitionsApiInterface {
     fun getCompetitions(): Call<Competitions>
 
     @GET("/api/competition/{competition}")
-    fun getCompetition(@Path("competition_id") id: Int): Call<CompetitionDetail>
+    fun getCompetitionDetail(@Path("competition_id") id: Int): Call<CompetitionDetail>
 
 }

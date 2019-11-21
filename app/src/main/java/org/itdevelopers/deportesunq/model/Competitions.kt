@@ -60,22 +60,28 @@ class Competitions : BaseObservable() {
 }
 
 data class Competition(
-    @SerializedName("competition_id") @Expose private val id: Int = -1,
+    @SerializedName("competition_id") @Expose private val competitionId: Int = -1,
     @SerializedName("name") @Expose private val name: String = "",
     @SerializedName("year") @Expose private val year: String = "",
     @SerializedName("champion_team") @Expose private val championTeam: String = "",
     @SerializedName("competition_detail") @Expose private val competitionDetail: CompetitionDetail? = null) :
     BaseObservable() {
 
+    fun getCompetitionId(): Int {
+        return competitionId
+    }
+
     fun fetchCompetitionDetail(callback: Callback<CompetitionDetail>) {
-        API.client.create(CompetitionsApiInterface::class.java).getCompetition(id).enqueue(callback)
+        API.client.create(CompetitionsApiInterface::class.java).getCompetitionDetail(competitionId).enqueue(callback)
     }
 }
 
 data class CompetitionDetail(
-    @SerializedName("id") @Expose private val id: Int,
     @SerializedName("competition_detail_items") @Expose private val competitionDetailItems: List<CompetitionDetailItem>) {
 
+    fun getCompetitionDetailItems(): List<CompetitionDetailItem> {
+        return competitionDetailItems
+    }
 
 }
 
