@@ -7,6 +7,7 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
+import org.itdevelopers.deportesunq.BR
 import org.itdevelopers.deportesunq.model.Competition
 import org.itdevelopers.deportesunq.ui.competitions.CompetitionsViewModel
 
@@ -43,11 +44,13 @@ class CompetitionsAdapter(
         this.competitions = competitions
     }
 
-    class GenericViewHolder internal constructor(binding: ViewDataBinding) :
+    class GenericViewHolder internal constructor(private val binding: ViewDataBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(viewModel: CompetitionsViewModel, position: Int) {
-//            TODO:
+        internal fun bind(viewModel: CompetitionsViewModel, position: Int?) {
+            binding.setVariable(BR.viewModel, viewModel)
+            binding.setVariable(BR.position, position)
+            binding.executePendingBindings()
         }
 
     }

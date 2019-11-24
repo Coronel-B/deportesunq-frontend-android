@@ -4,13 +4,15 @@
       "id": 2,
       "name": 2,
       "year": 2,
-      "champion": 2
+      "champion": 2,
+      "logo_url": "Unqui-2018"
     },
     {
       "id": 2,
       "name": 2,
       "year": 2,
-      "champion": 2
+      "champion": 2,
+      "logo_url": "Unqui-2018"
     }
   ],
   "status": 200

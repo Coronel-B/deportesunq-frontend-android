@@ -23,7 +23,6 @@ import androidx.lifecycle.MutableLiveData as MutableLiveData
 class CompetitionsViewModel(private var competitions: Competitions,
                             private var competitionsAdapter: CompetitionsAdapter,
                             private var selected: MutableLiveData<Competition>? = null,
-                            var competitionDetail: ObservableArrayMap<Int, CompetitionDetailItem>,
                             var loading: ObservableInt,
                             var showEmpty: ObservableInt): ViewModel() {
 
@@ -31,7 +30,6 @@ class CompetitionsViewModel(private var competitions: Competitions,
         competitions = Competitions()
         competitionsAdapter = CompetitionsAdapter(R.layout.view_competition, this)
         selected = MutableLiveData()
-        competitionDetail = ObservableArrayMap()
         loading = ObservableInt(View.GONE)
         showEmpty = ObservableInt(View.GONE)
     }
@@ -62,7 +60,7 @@ class CompetitionsViewModel(private var competitions: Competitions,
         selected?.value = competition
     }
 
-    private fun getCompetitionAt(index: Int?): Competition? {
+    fun getCompetitionAt(index: Int?): Competition? {
         if (competitions.getCompetitions().value != null && index != null &&
                 competitions.getCompetitions().value!!.size > index) {
             return competitions.getCompetitions().value!![index]
@@ -70,11 +68,14 @@ class CompetitionsViewModel(private var competitions: Competitions,
         return null
     }
 
+
+
     /**
+     * TODO: Esto iria al clickear un item, es decir en el viewModel de CompetitionDetail
      * OBS:
      * El detalle (que tiene la lista de ítems) está contenido de una competición
      */
-    fun fetchCompetitionDetailAt(index: Int) {
+    /*fun fetchCompetitionDetailAt(index: Int) {
         val competition: Competition? = getCompetitionAt(index)
         if (competition != null && !competitionDetail.containsKey(competition.getCompetitionId()) ) {
             competition.fetchCompetitionDetail(object : CompetitionDetailCallback(competition) {
@@ -96,10 +97,6 @@ class CompetitionsViewModel(private var competitions: Competitions,
 
             })
         }
-    }
-
-
-
-
+    }*/
 
 }

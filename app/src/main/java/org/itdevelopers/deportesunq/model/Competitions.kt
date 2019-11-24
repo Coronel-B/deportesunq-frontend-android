@@ -64,11 +64,28 @@ data class Competition(
     @SerializedName("name") @Expose private val name: String = "",
     @SerializedName("year") @Expose private val year: String = "",
     @SerializedName("champion_team") @Expose private val championTeam: String = "",
+    @SerializedName("logo_url") @Expose private val logoUrl: String = "",
     @SerializedName("competition_detail") @Expose private val competitionDetail: CompetitionDetail? = null) :
     BaseObservable() {
 
     fun getCompetitionId(): Int {
         return competitionId
+    }
+
+    fun getName(): String {
+        return name
+    }
+
+    fun getYear(): String {
+        return year
+    }
+
+    fun getChampionTeam(): String {
+        return championTeam
+    }
+
+    fun getLogoUrl(): String {
+        return logoUrl
     }
 
     fun fetchCompetitionDetail(callback: Callback<CompetitionDetail>) {
