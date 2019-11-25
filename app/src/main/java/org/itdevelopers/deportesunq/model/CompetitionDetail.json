@@ -1,0 +1,28 @@
+{
+  "body": [
+    {
+      "id": 2,
+      "competition_detail_items": [
+        {
+          "position": 1,
+          "team":
+            {
+              "id": 2,
+              "alias": "UNQ",
+              "fullName": "Universidad Nacional de Quilmes"
+            }
+        },
+        {
+          "position": 2,
+          "team":
+          {
+            "id": 2,
+            "alias": "UNL",
+            "fullName": "Universidad Nacional de Lanus"
+          }
+        }
+      ]
+    }
+  ],
+  "status": 200
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="position"
+            type="java.lang.Integer" />
+
+        <variable
+            name="viewModel"
+            type="org.itdevelopers.deportesunq.ui.competitions.CompetitionsViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:onClick="@{() -> viewModel.onItemClick(position)">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/competition_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:logoUrl="@{viewModel.getCompetitionAt(position).logoUrl}"/>
+
+        <TextView
+            android:id="@+id/competition_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/competition_image"
+            tools:text="Liga Universitaria"
+            android:text="@{viewModel.getCompetitionAt(position).name}"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/competition_name"
+            tools:text="2019"
+            android:text="@{viewModel.getCompetitionAt(position).year}"/>
+
+        <TextView
+            android:id="@+id/champion_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toBottomOf="@id/competition_name"
+            app:layout_constraintLeft_toRightOf="@id/competition_image"
+            tools:text="Universidad Nacional de Quilmes"
+            android:text="@{viewModel.getCompetitionAt(position).year}"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
