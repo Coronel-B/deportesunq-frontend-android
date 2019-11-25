@@ -42,7 +42,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="@{viewModel.getCompetitionAt(position).name}"
+            android:text="@{viewModel.getCompetitionAt(position).name} "
             app:layout_constraintLeft_toRightOf="@id/competition_image"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Liga Universitaria" />

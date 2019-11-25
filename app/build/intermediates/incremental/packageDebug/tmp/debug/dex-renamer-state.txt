@@ -1,4 +1,4 @@
-#Sun Nov 24 21:51:41 ART 2019
+#Sun Nov 24 22:08:58 ART 2019
 base.0=F\:\\Projects\\UNQ\\deportesunq-frontend-android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
