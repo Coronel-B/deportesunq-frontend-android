@@ -73,7 +73,7 @@ data class Competition(
     }
 
     fun getName(): String {
-        return name
+        return "$name "
     }
 
     fun getYear(): Int {
