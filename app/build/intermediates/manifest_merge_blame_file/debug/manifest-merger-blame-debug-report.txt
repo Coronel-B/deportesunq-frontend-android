@@ -6,41 +6,71 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-8-->/home/itdev/GitHub/deportesunq-frontend-android/app/src/main/AndroidManifest.xml
+8-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->/home/itdev/GitHub/deportesunq-frontend-android/app/src/main/AndroidManifest.xml
+9-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml
 10
-11    <application
-11-->/home/itdev/GitHub/deportesunq-frontend-android/app/src/main/AndroidManifest.xml:5:5-19:19
-12        android:allowBackup="true"
-12-->/home/itdev/GitHub/deportesunq-frontend-android/app/src/main/AndroidManifest.xml:6:9-35
-13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.1.0] /home/itdev/.gradle/caches/transforms-2/files-2.1/ec4df20c44042760ddced03ead47e8bd/core-1.1.0/AndroidManifest.xml:24:18-86
-14        android:debuggable="true"
-15        android:icon="@mipmap/ic_launcher"
-15-->/home/itdev/GitHub/deportesunq-frontend-android/app/src/main/AndroidManifest.xml:7:9-43
-16        android:label="@string/app_name"
-16-->/home/itdev/GitHub/deportesunq-frontend-android/app/src/main/AndroidManifest.xml:8:9-41
-17        android:roundIcon="@mipmap/ic_launcher_round"
-17-->/home/itdev/GitHub/deportesunq-frontend-android/app/src/main/AndroidManifest.xml:9:9-54
-18        android:supportsRtl="true"
-18-->/home/itdev/GitHub/deportesunq-frontend-android/app/src/main/AndroidManifest.xml:10:9-35
-19        android:theme="@style/AppTheme" >
-19-->/home/itdev/GitHub/deportesunq-frontend-android/app/src/main/AndroidManifest.xml:11:9-40
-20        <activity android:name="org.itdevelopers.deportesunq.MainActivity" >
-20-->/home/itdev/GitHub/deportesunq-frontend-android/app/src/main/AndroidManifest.xml:12:9-18:20
-20-->/home/itdev/GitHub/deportesunq-frontend-android/app/src/main/AndroidManifest.xml:12:19-47
-21            <intent-filter>
-21-->/home/itdev/GitHub/deportesunq-frontend-android/app/src/main/AndroidManifest.xml:13:13-17:29
-22                <action android:name="android.intent.action.MAIN" />
-22-->/home/itdev/GitHub/deportesunq-frontend-android/app/src/main/AndroidManifest.xml:14:17-69
-22-->/home/itdev/GitHub/deportesunq-frontend-android/app/src/main/AndroidManifest.xml:14:25-66
-23
-24                <category android:name="android.intent.category.LAUNCHER" />
-24-->/home/itdev/GitHub/deportesunq-frontend-android/app/src/main/AndroidManifest.xml:16:17-77
-24-->/home/itdev/GitHub/deportesunq-frontend-android/app/src/main/AndroidManifest.xml:16:27-74
-25            </intent-filter>
-26        </activity>
-27    </application>
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:6:5-67
+11-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:6:22-64
+12
+13    <!-- https://stackoverflow.com/a/50834600/5279996 -->
+14    <application
+14-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:9:5-27:19
+15        android:allowBackup="true"
+15-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:10:9-35
+16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+16-->[androidx.core:core:1.1.0] C:\Users\livef\.gradle\caches\transforms-2\files-2.1\ec4df20c44042760ddced03ead47e8bd\core-1.1.0\AndroidManifest.xml:24:18-86
+17        android:debuggable="true"
+18        android:icon="@mipmap/ic_launcher"
+18-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:11:9-43
+19        android:label="@string/app_name"
+19-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:12:9-41
+20        android:roundIcon="@mipmap/ic_launcher_round"
+20-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:13:9-54
+21        android:supportsRtl="true"
+21-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:14:9-35
+22        android:testOnly="true"
+23        android:theme="@style/AppTheme"
+23-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:15:9-40
+24        android:usesCleartextTraffic="true" >
+24-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:16:9-44
+25        <activity android:name="org.itdevelopers.deportesunq.ui.competitions.CompetitionsActivity" >
+25-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:18:9-23:20
+25-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:18:19-71
+26            <intent-filter>
+26-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:19:13-22:29
+27                <action android:name="android.intent.action.MAIN" />
+27-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:20:17-69
+27-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:20:25-66
 28
-29</manifest>
+29                <category android:name="android.intent.category.LAUNCHER" />
+29-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:21:17-77
+29-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:21:27-74
+30            </intent-filter>
+31        </activity>
+32        <activity android:name="org.itdevelopers.deportesunq.MainActivity" >
+32-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:24:9-26:20
+32-->F:\Projects\UNQ\deportesunq-frontend-android\app\src\main\AndroidManifest.xml:24:19-47
+33        </activity>
+34
+35        <meta-data
+35-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\livef\.gradle\caches\transforms-2\files-2.1\efa2918efd0dd3362422b587fd8bb7d2\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:11:9-13:43
+36            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+36-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\livef\.gradle\caches\transforms-2\files-2.1\efa2918efd0dd3362422b587fd8bb7d2\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:12:13-84
+37            android:value="GlideModule" />
+37-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\livef\.gradle\caches\transforms-2\files-2.1\efa2918efd0dd3362422b587fd8bb7d2\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:13:13-40
+38
+39        <provider
+39-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\livef\.gradle\caches\transforms-2\files-2.1\821600d1c4e66cb7b69eb7c178be538f\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
+40            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+40-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\livef\.gradle\caches\transforms-2\files-2.1\821600d1c4e66cb7b69eb7c178be538f\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:24:13-79
+41            android:authorities="org.itdevelopers.deportesunq.lifecycle-process"
+41-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\livef\.gradle\caches\transforms-2\files-2.1\821600d1c4e66cb7b69eb7c178be538f\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:25:13-69
+42            android:exported="false"
+42-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\livef\.gradle\caches\transforms-2\files-2.1\821600d1c4e66cb7b69eb7c178be538f\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:26:13-37
+43            android:multiprocess="true" />
+43-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\livef\.gradle\caches\transforms-2\files-2.1\821600d1c4e66cb7b69eb7c178be538f\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:27:13-40
+44    </application>
+45
+46</manifest>

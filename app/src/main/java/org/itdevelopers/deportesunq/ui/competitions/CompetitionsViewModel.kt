@@ -17,16 +17,19 @@ import retrofit2.Response
 import androidx.lifecycle.MutableLiveData as MutableLiveData
 
 /**
- * OBS: La variable selected tiene que ser privada sino tira un error de "same JVM signature"
- * Source: https://stackoverflow.com/a/44719646/5279996
+ * OBS: La variable selected tiene que ser privada sino tira un error de "same JVM signature".
+ * Inicializo las variables en null para evitar el error ViewModel has no zero argument constructor
+ * Source:
+ * . https://stackoverflow.com/a/44719646/5279996
+ * . https://stackoverflow.com/q/44194579/5279996
  */
-class CompetitionsViewModel(private var competitions: Competitions,
-                            private var competitionsAdapter: CompetitionsAdapter,
+class CompetitionsViewModel(private var competitions: Competitions? = null,
+                            private var competitionsAdapter: CompetitionsAdapter? = null,
                             private var selected: MutableLiveData<Competition>? = null,
-                            var loading: ObservableInt,
-                            var showEmpty: ObservableInt): ViewModel() {
+                            var loading: ObservableInt? = null,
+                            var showEmpty: ObservableInt? = null): ViewModel() {
 
-    init {
+    fun init() {
         competitions = Competitions()
         competitionsAdapter = CompetitionsAdapter(R.layout.view_competition, this)
         selected = MutableLiveData()
@@ -35,20 +38,20 @@ class CompetitionsViewModel(private var competitions: Competitions,
     }
 
     fun fetchList() {
-        competitions.fetchList()
+        competitions?.fetchList()
     }
 
-    fun getCompetitions(): MutableLiveData<List<Competition>> {
-        return competitions.getCompetitions()
+    fun getCompetitions(): MutableLiveData<List<Competition>>? {
+        return competitions?.getCompetitions()
     }
 
-    fun getAdapter(): CompetitionsAdapter {
+    fun getAdapter(): CompetitionsAdapter? {
         return competitionsAdapter
     }
 
     fun setCompetitionsInAdapter(competitions: List<Competition>) {
-        competitionsAdapter.setCompetitions(competitions)
-        competitionsAdapter.notifyDataSetChanged()
+        competitionsAdapter?.setCompetitions(competitions)
+        competitionsAdapter?.notifyDataSetChanged()
     }
 
     fun getSelected(): MutableLiveData<Competition>? {
@@ -61,9 +64,9 @@ class CompetitionsViewModel(private var competitions: Competitions,
     }
 
     fun getCompetitionAt(index: Int?): Competition? {
-        if (competitions.getCompetitions().value != null && index != null &&
-                competitions.getCompetitions().value!!.size > index) {
-            return competitions.getCompetitions().value!![index]
+        if (competitions?.getCompetitions()?.value != null && index != null &&
+                competitions?.getCompetitions()!!.value!!.size > index) {
+            return competitions?.getCompetitions()!!.value!![index]
         }
         return null
     }

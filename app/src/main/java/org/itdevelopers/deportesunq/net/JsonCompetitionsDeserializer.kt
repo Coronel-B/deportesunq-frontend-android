@@ -11,24 +11,38 @@ class JsonCompetitionsDeserializer: JsonDeserializer<Competitions> {
 
     @Throws(JsonParseException::class)
     override fun deserialize(
-        json: JsonElement?,
-        typeOfT: Type?,
+        json: JsonElement,
+        typeOfT: Type,
         context: JsonDeserializationContext?
-    ): Competitions? {
-        val competitions: Competitions? = null
-        if (json?.isJsonObject!!) {
-            for (entry in json.asJsonObject.entrySet()) {
-                if (entry.key == "status") {
-                    Log.d("Test", "Primitive: " + entry.key.toString() + entry.value.asString)
-                    competitions?.setStatus(entry.value.asString)
-                } else if (entry.key == "message") {
-                    Log.d("Test", "Object: key: " + entry.key.toString() + " = "+ entry.value)
-                    val jsonObject: JsonObject = entry.value.asJsonObject
-                    for (subEntry in jsonObject.entrySet()) {
-//                        TODO: Llenar cada competición
-//                        val competition = Competition(subEntry.key[''],)
-                        val competition = Competition()
-                        competitions?.addCompetition(competition)
+    ): Competitions {
+        val competitions = Competitions()
+        if (json.isJsonObject) {
+            for ((key, value) in json.asJsonObject.entrySet()) {
+                if (key == "status") {
+                    Log.d("Test", "Primitive: " + key.toString() + value.asString)
+                    competitions.setStatus(value.asString)
+                } else if (key == "body") {
+                    Log.d("Test", "Object: key: $key = $value")
+
+
+                    Log.d("Test", "JsonArray: ${value.asJsonArray}")
+                    val jsonArray = value.asJsonArray
+
+                    for (element in jsonArray) {
+                        Log.d("Test", "Element: " + element.asJsonObject.toString())
+//                        No usar asJsonObject.entrySet sino no puedo acceder a los valores del objeto
+                        val jsonObject = element.asJsonObject
+
+//                        Borra el primer y último caracter, es decir, las comillas
+                        Log.d("Test", jsonObject.get("name").toString().drop(1).dropLast(1))
+                        val competition = Competition(
+                            jsonObject.get("id").toString().toInt(),
+                            jsonObject.get("name").toString().drop(1).dropLast(1),
+                            jsonObject.get("year").toString().toInt(),
+                            jsonObject.get("champion").toString().drop(1).dropLast(1),
+                            jsonObject.get("logo_url").toString().drop(1).dropLast(1)
+                        )
+                        competitions.addCompetition(competition)
                     }
                 }
             }
