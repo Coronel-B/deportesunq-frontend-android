@@ -23,7 +23,11 @@ class CompetitionsAdapter(
     }
 
     override fun getItemCount(): Int {
-        return competitions?.size!!
+        return if (competitions == null) {
+            0
+        } else {
+            competitions!!.size
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GenericViewHolder {

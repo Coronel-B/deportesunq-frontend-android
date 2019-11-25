@@ -60,10 +60,10 @@ class Competitions : BaseObservable() {
 }
 
 data class Competition(
-    @SerializedName("competition_id") @Expose private val competitionId: Int = -1,
+    @SerializedName("id") @Expose private val competitionId: Int = -1,
     @SerializedName("name") @Expose private val name: String = "",
-    @SerializedName("year") @Expose private val year: String = "",
-    @SerializedName("champion_team") @Expose private val championTeam: String = "",
+    @SerializedName("year") @Expose private val year: Int = -1,
+    @SerializedName("champion") @Expose private val championTeam: String = "",
     @SerializedName("logo_url") @Expose private val logoUrl: String = "",
     @SerializedName("competition_detail") @Expose private val competitionDetail: CompetitionDetail? = null) :
     BaseObservable() {
@@ -76,7 +76,7 @@ data class Competition(
         return name
     }
 
-    fun getYear(): String {
+    fun getYear(): Int {
         return year
     }
 

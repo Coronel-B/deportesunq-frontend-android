@@ -7,9 +7,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import org.itdevelopers.deportesunq.R
 
-class CompetitionsBindings {
+object CompetitionsBindings {
 
+    /**
+     * Source:
+     * https://stackoverflow.com/a/48101192/5279996
+     */
     @BindingAdapter("setAdapter")
+    @JvmStatic
     fun bindRecyclerViewAdapter(recyclerView: RecyclerView, adapter: RecyclerView.Adapter<*>?) {
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(recyclerView.context)
@@ -17,6 +22,7 @@ class CompetitionsBindings {
     }
 
     @BindingAdapter("logoUrl")
+    @JvmStatic
     fun bindRecyclerViewAdapter(imageView: ImageView, logoUrl: String) {
 //            If we don't do this, you'll see the old image appear briefly before it's replaced with the current image
         if (imageView.getTag(R.id.logo_url) != logoUrl
