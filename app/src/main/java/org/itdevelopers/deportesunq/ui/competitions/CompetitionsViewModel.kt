@@ -1,19 +1,12 @@
 package org.itdevelopers.deportesunq.ui.competitions
 
-import android.util.Log
 import android.view.View
-import androidx.databinding.ObservableArrayMap
 import androidx.databinding.ObservableInt
 import androidx.lifecycle.ViewModel
 import org.itdevelopers.deportesunq.R
 import org.itdevelopers.deportesunq.adapter.CompetitionsAdapter
 import org.itdevelopers.deportesunq.model.Competition
-import org.itdevelopers.deportesunq.model.CompetitionDetail
-import org.itdevelopers.deportesunq.model.CompetitionDetailItem
 import org.itdevelopers.deportesunq.model.Competitions
-import org.itdevelopers.deportesunq.net.CompetitionDetailCallback
-import retrofit2.Call
-import retrofit2.Response
 import androidx.lifecycle.MutableLiveData as MutableLiveData
 
 /**
@@ -38,7 +31,7 @@ class CompetitionsViewModel(private var competitions: Competitions? = null,
     }
 
     fun fetchList() {
-        competitions?.fetchList()
+        competitions?.fetchCompetitionsList()
     }
 
     fun getCompetitions(): MutableLiveData<List<Competition>>? {
