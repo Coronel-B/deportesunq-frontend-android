@@ -88,7 +88,7 @@ class CompetitionsViewModel(private var competitions: Competitions? = null,
                 }
 
                 override fun onFailure(call: Call<CompetitionDetail>, t: Throwable) {
-                    Log.e("Test", t.message, t)
+                    Log.d("Test", t.message, t)
                 }
 
             })

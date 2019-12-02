@@ -1,6 +1,5 @@
-package org.itdevelopers.deportesunq.interfaces
+package org.itdevelopers.deportesunq.services
 
-import org.itdevelopers.deportesunq.model.Competition
 import org.itdevelopers.deportesunq.model.CompetitionDetail
 import org.itdevelopers.deportesunq.model.Competitions
 import retrofit2.Call
@@ -8,7 +7,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 
-interface CompetitionsApiInterface {
+interface CompetitionsApiService {
 
     @GET("/competitions")
     fun getCompetitions(): Call<Competitions>

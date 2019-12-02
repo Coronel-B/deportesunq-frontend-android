@@ -3,13 +3,16 @@
 
 Source documentation:
     https://developer.android.com/studio/test/index.html#top_of_page
-    https://developer.android.com/training/testing/index.html
+    https://developer.android.com/training/testing/index.
+    https://github.com/square/okhttp/tree/master/mockwebserver
+    https://android.jlelse.eu/unit-test-api-calls-with-mockwebserver-d4fab11de847
+    https://medium.com/@hanru.yeh/unit-test-retrofit-and-mockwebserver-a3e4e81fd2a2
+    https://stackoverflow.com/questions/41366005/how-to-make-mockwebserver-work
 
 Source Code:
     Development
         https://github.com/dhruvkaushal11/MVVM-Kotlin-RecyclerView-
         https://github.com/alphamu/android-MVVM-DataBinding-RecyclerViewExample
-        https://www.adictosaltrabajo.com/2019/09/26/data-binding-con-recycler-view-en-android/
 
     Testing
         https://github.com/android/testing-samples

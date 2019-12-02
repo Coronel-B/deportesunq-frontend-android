@@ -5,7 +5,7 @@ import androidx.databinding.BaseObservable
 import androidx.lifecycle.MutableLiveData
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import org.itdevelopers.deportesunq.interfaces.CompetitionsApiInterface
+import org.itdevelopers.deportesunq.services.CompetitionsApiService
 import org.itdevelopers.deportesunq.net.API
 import retrofit2.Call
 import retrofit2.Callback
@@ -46,11 +46,11 @@ class Competitions : BaseObservable() {
             }
 
             override fun onFailure(call: Call<Competitions>, t: Throwable) {
-                Log.e("Test", t.message, t)
+                Log.d("Test", t.message, t)
             }
         }
 
-        API.client.create(CompetitionsApiInterface::class.java).getCompetitions().enqueue(callback)
+        API.client.create(CompetitionsApiService::class.java).getCompetitions().enqueue(callback)
     }
 
 }
@@ -96,7 +96,7 @@ data class Competition(
     }
 
     fun fetchCompetitionDetail(callback: Callback<CompetitionDetail>) {
-        API.client.create(CompetitionsApiInterface::class.java).getCompetitionDetail(competitionId).enqueue(callback)
+        API.client.create(CompetitionsApiService::class.java).getCompetitionDetail(competitionId).enqueue(callback)
     }
 
 }

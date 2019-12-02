@@ -18,7 +18,7 @@ class API {
         val client: Retrofit
             get() {
 
-                val logging: HttpLoggingInterceptor = HttpLoggingInterceptor()
+                val logging = HttpLoggingInterceptor()
                 logging.level = HttpLoggingInterceptor.Level.BASIC
                 val okHttpClient: OkHttpClient = OkHttpClient.Builder()
                     .addInterceptor(logging)
