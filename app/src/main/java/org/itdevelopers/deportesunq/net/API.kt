@@ -12,7 +12,7 @@ class API {
 
     companion object {
 
-        private const val BASE_URL: String = "http://private-f98755-deportesunq.apiary-mock.com"
+        private const val BASE_URL: String = "http://private-f98755-deportesunq.apiary-mock.com/"
         private var retrofit: Retrofit? = null
 
         val client: Retrofit

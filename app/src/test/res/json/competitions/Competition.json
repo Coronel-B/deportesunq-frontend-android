@@ -1,20 +1,61 @@
 {
   "body": [
     {
-      "id": 2,
-      "name": 2,
-      "year": 2,
-      "champion": 2,
-      "logo_url": "Unqui-2018"
+      "id": 0,
+      "name": "Liga Universitaria",
+      "year": 2019,
+      "champion": "Universidad Tecnológica Nacional",
+      "logo_url": "http://ligas.feduargentina.com.ar/futsal/wp-content/uploads/sites/2/2017/05/logo-utn-293x300.jpg"
     },
     {
-      "id": 2,
-      "name": 2,
-      "year": 2,
-      "champion": 2,
-      "logo_url": "Unqui-2018"
+      "id": 1,
+      "name": "Liga",
+      "year": 2018,
+      "champion": "Universidad Nacional de Quilmes",
+      "logo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRoh3EcBfIaMgFv6iMB9B0c95I7Iq9M9zm7gWP5XL31kjJ5Tvsu"
+    },
+    {
+      "id": 9,
+      "name": "Liga",
+      "year": 2019,
+      "champion": "Universidad Modelo de Lomas",
+      "logo_url": "http://ligas.feduargentina.com.ar/futsal/wp-content/uploads/sites/2/2018/05/MODELO-LOMAS.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Liga",
+      "year": 2019,
+      "champion": "Universidad Nacional Jauretche",
+      "logo_url": "http://ligas.feduargentina.com.ar/futsal/wp-content/uploads/sites/2/2017/05/logo-universidad-nacional-arturo-jauretche-150x150.png"
+    },
+    {
+      "id": 11,
+      "name": "Liga",
+      "year": 2019,
+      "champion": "Universidad Nacional de Quilmes",
+      "logo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRoh3EcBfIaMgFv6iMB9B0c95I7Iq9M9zm7gWP5XL31kjJ5Tvsu"
+    },
+    {
+      "id": 12,
+      "name": "Liga",
+      "year": 2019,
+      "champion": "UBA Sociales",
+      "logo_url": "http://ligas.feduargentina.com.ar/futsal/wp-content/uploads/sites/2/2018/05/logo-uba-201x300.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Liga",
+      "year": 2019,
+      "champion": "Universidad Modelo de Lomas",
+      "logo_url": "http://ligas.feduargentina.com.ar/futsal/wp-content/uploads/sites/2/2018/05/MODELO-LOMAS.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Liga",
+      "year": 2019,
+      "champion": "Universidad Nacional Jauretche",
+      "logo_url": "http://ligas.feduargentina.com.ar/futsal/wp-content/uploads/sites/2/2017/05/logo-universidad-nacional-arturo-jauretche-150x150.png"
     }
   ],
   "status": 200
 }
-
